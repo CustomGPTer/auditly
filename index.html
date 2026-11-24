@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auditly: a free, private app permission and privacy auditor for Android</title>
+<meta name="description" content="Auditly audits every app on your Android phone: a privacy grade for each app and a score for the phone, every permission in plain English, trackers found inside apps, special access, a timeline of changes and a step-by-step Fix it list. No internet access, no adverts, no account.">
+<meta name="author" content="Jonathan Jackson">
+<link rel="canonical" href="https://customgpter.github.io/auditly/">
+<meta name="theme-color" content="#f4f7fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#060a13" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Auditly">
+<meta property="og:title" content="Auditly: a free, private app permission and privacy auditor for Android">
+<meta property="og:description" content="Auditly audits every app on your Android phone: a privacy grade for each app and a score for the phone, every permission in plain English, trackers found inside apps, special access, a timeline of changes and a step-by-step Fix it list. No internet access, no adverts, no account.">
+<meta property="og:url" content="https://customgpter.github.io/auditly/">
+<meta property="og:image" content="https://customgpter.github.io/auditly/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Auditly&#x27;s home screen: a privacy score of 59, grade D, with sensitive permissions, trackers and the top things to fix">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<link rel="preload" href="./assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/site.css?v=1">
+<link rel="stylesheet" href="./assets/house.css?v=1">
+<link rel="stylesheet" href="./assets/apps-list.css?v=1">
+<script src="./assets/apps-list.js?v=1" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Auditly","url":"https://customgpter.github.io/auditly/","description":"Auditly audits every app on your Android phone: a privacy grade for each app and a score for the phone, every permission in plain English, trackers found inside apps, special access, a timeline of changes and a step-by-step Fix it list. No internet access, no adverts, no account.","applicationCategory":"SecurityApplication","operatingSystem":"Android 10 or later","softwareVersion":"1.0.0","downloadUrl":"https://github.com/CustomGPTer/auditly/releases/latest/download/Auditly.apk","releaseNotes":"https://customgpter.github.io/auditly/releases.html","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"inLanguage":"en-GB","image":"https://customgpter.github.io/auditly/assets/og.png","featureList":["A grade for every app","A score for your phone","Apps that don't fit","Monitoring software","Every permission explained","Special access","Trackers inside apps","The full detail","Fix it","The watcher","Timeline","Unused apps"],"author":{"@type":"Person","name":"Jonathan Jackson"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Auditly really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no paid version, no subscription and no adverts, and nothing in the app is locked."}},{"@type":"Question","name":"Is it on Google Play?","acceptedAnswer":{"@type":"Answer","text":"No. Auditly is a personal project and is downloaded from this site as an Android app file. It needs Android 10 or later."}},{"@type":"Question","name":"Why does it need to see all my apps?","acceptedAnswer":{"@type":"Answer","text":"To audit them. Android lets Auditly list installed apps and read the permissions each one asks for. That list never leaves your phone, because Auditly has no internet access."}},{"@type":"Question","name":"Can Auditly change other apps' permissions?","acceptedAnswer":{"@type":"Answer","text":"Not by itself: Android does not let one app change another's permissions. Fix it opens the right page in Android's settings so you can change it in one tap. With the optional Power mode (using the free Shizuku app) it can switch off a permission or freeze an app directly."}},{"@type":"Question","name":"How does it find trackers?","acceptedAnswer":{"@type":"Answer","text":"It looks inside each app's own code for the names of 69 known advertising, analytics and crash-reporting libraries. Nothing is run and nothing is sent anywhere."}},{"@type":"Question","name":"Why is the watcher only hourly?","acceptedAnswer":{"@type":"Answer","text":"Android does not tell other apps straight away when an app is installed or updated, so Auditly checks about once an hour. Uninstalls are noticed straight away. The watcher is optional and explained before you switch it on."}},{"@type":"Question","name":"What does usage access do?","acceptedAnswer":{"@type":"Answer","text":"Only the Unused apps tool uses it, to see when you last opened each app. It is off until you switch it on, and Auditly explains it first."}},{"@type":"Question","name":"Does a low grade mean an app is dangerous?","acceptedAnswer":{"@type":"Answer","text":"No. A grade measures how much an app can reach, not what it does with it. A messaging app needs your contacts and microphone. The reasons under each grade tell you whether that kind of app normally needs that access."}},{"@type":"Question","name":"Does it work on an iPhone?","acceptedAnswer":{"@type":"Answer","text":"No. Auditly is for Android phones and tablets only."}},{"@type":"Question","name":"Who made it?","acceptedAnswer":{"@type":"Answer","text":"Auditly is made by Jonathan Jackson, an independent developer in the United Kingdom."}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<div class="wrap">
+<a class="brand" href="./" aria-label="Auditly home"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="aubg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10233F"/><stop offset="1" stop-color="#04070E"/></linearGradient><radialGradient id="augl" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2EE6C5" stop-opacity=".22"/><stop offset="1" stop-color="#2EE6C5" stop-opacity="0"/></radialGradient><linearGradient id="aush" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2EE6C5"/><stop offset="1" stop-color="#38BDF8"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#aubg)"/><circle cx="54" cy="54" r="40" fill="url(#augl)"/><circle cx="54" cy="54" r="33" fill="none" stroke="#2EE6C5" stroke-opacity=".35" stroke-width="1.4"/><circle cx="54" cy="54" r="25" fill="none" stroke="#2EE6C5" stroke-opacity=".18" stroke-width="1.2"/><g transform="translate(54 52) scale(1.2) translate(-54 -51.5)"><path d="M54 33C59.5 36 65 37.4 69 37.4C69.4 52.5 63.4 62.5 54 70C44.6 62.5 38.6 52.5 39 37.4C43 37.4 48.5 36 54 33Z" fill="url(#aush)"/><path d="M46.5 51.5L51.8 56.8L62 46" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span>Auditly</span></a>
+<nav aria-label="Main"><ul><li><a href="./#features">Features</a></li><li><a href="./compare.html">Compare</a></li><li><a href="./releases.html">Releases</a></li><li><a class="more-apps" href="./more-apps.html"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></svg>More apps</a></li></ul></nav>
+<a class="button small" href="https://github.com/CustomGPTer/auditly/releases/latest/download/Auditly.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download</a>
+</div>
+</header>
+<main id="main">
+<div class="hero">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<h1>See what every app on your phone can really do.</h1>
+<p class="lede">Auditly reads every app on your phone and grades it from A to F for privacy. It explains each permission in plain English, finds the trackers built into your apps, shows which apps hold the powerful special access, and gives your whole phone a privacy score.</p><p class="lede">Then it helps you fix it: a short list of the changes that matter most, each one a tap away in Android's own settings. Auditly has no internet access, so nothing it learns about your phone can ever leave it.</p>
+
+<p class="get" id="download"><a class="button" href="https://github.com/CustomGPTer/auditly/releases/latest/download/Auditly.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a><a class="aside" href="#install">How to install</a></p>
+<ul class="pills"><li>Version 1.0.0</li><li>Android 10 or later</li><li>4.1 MB</li></ul>
+<p class="facts">Free, with nothing to unlock. No adverts, no account with the developer, no tracking. <a href="compare.html">Compare</a> or read the <a href="releases.html">release notes</a>.</p>
+<p class="facts">Chrome may say the file might be harmful. It shows this for app files that do not come from Google Play. Choose Download anyway.</p>
+</div>
+<div class="hero-phone"><div class="phone"><img src="./assets/screens/home.png" alt="Home: your phone&#x27;s privacy score and grade, the apps that need a look, trackers found, and the top things to fix." width="393" height="852" fetchpriority="high"></div></div>
+</div>
+</div>
+
+<section class="promises" aria-label="In short">
+<div class="wrap"><ul><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No internet access</b><span>Auditly cannot go online at all.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No adverts</b><span>None in the app and none on this site.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>Nothing to buy</b><span>Every feature is free, with nothing locked.</span></span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.6 12.4l2.3 2.3 4.5-4.9"/></svg><span><b>No account</b><span>Nothing to sign up for.</span></span></li></ul></div>
+</section>
+
+<section id="screens" aria-labelledby="screens-h">
+<div class="wrap">
+<h2 id="screens-h">A look inside</h2>
+<p class="intro">These are the real screens, drawn from the app&#x27;s own code with made-up apps. Swipe or scroll sideways to see them all.</p>
+<div class="gallery" tabindex="0" role="region" aria-label="Screens from Auditly"><figure class="shot"><div class="phone"><img src="./assets/screens/home.png" alt="Home: your phone&#x27;s privacy score and grade, the apps that need a look, trackers found, and the top things to fix." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Home: your phone&#x27;s privacy score and grade, the apps that need a look, trackers found, and the top things to fix.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/app.png" alt="One app&#x27;s grade, with every reason behind it and the points each one costs." width="393" height="852" loading="eager" decoding="async"></div><figcaption>One app&#x27;s grade, with every reason behind it and the points each one costs.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/permission.png" alt="A permission in plain English: what it allows, how it can be misused, who normally needs it, and which apps hold it." width="393" height="852" loading="eager" decoding="async"></div><figcaption>A permission in plain English: what it allows, how it can be misused, who normally needs it, and which apps hold it.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/trackers.png" alt="Trackers found inside your apps: advertising, analytics and crash reporting, from 69 known tracker libraries." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Trackers found inside your apps: advertising, analytics and crash reporting, from 69 known tracker libraries.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/special.png" alt="Special access: the apps that can read your screen, your notifications or run the phone, with a link to switch each off." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Special access: the apps that can read your screen, your notifications or run the phone, with a link to switch each off.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/timeline.png" alt="The timeline: every install, update, removal and new permission, with risky changes marked." width="393" height="852" loading="eager" decoding="async"></div><figcaption>The timeline: every install, update, removal and new permission, with risky changes marked.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/fix.png" alt="Fix it: the changes that matter most, one at a time, each opening the right page in Android&#x27;s settings." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Fix it: the changes that matter most, one at a time, each opening the right page in Android&#x27;s settings.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/compare.png" alt="Compare two apps side by side: score, permissions, trackers, special access and where they came from." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Compare two apps side by side: score, permissions, trackers, special access and where they came from.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/unused.png" alt="Unused apps that still hold sensitive permissions, with a one-tap uninstall." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Unused apps that still hold sensitive permissions, with a one-tap uninstall.</figcaption></figure><figure class="shot"><div class="phone"><img src="./assets/screens/light.png" alt="Light theme. Auditly also matches your phone or your wallpaper&#x27;s colours." width="393" height="852" loading="eager" decoding="async"></div><figcaption>Light theme. Auditly also matches your phone or your wallpaper&#x27;s colours.</figcaption></figure></div>
+</div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
+<div class="wrap">
+<h2 id="how-h">How it works</h2>
+<p class="intro">Auditly reads what Android already knows about each app, and looks inside each app's own files for tracker libraries. All of it happens on your phone.</p>
+<ol class="steps"><li><h3>Open it</h3><p>Auditly audits every app in a few seconds and gives each one a grade from A to F, and your phone a score out of 100.</p></li><li><h3>Understand it</h3><p>Tap any app or permission for the plain-English story: what it allows, how it can be misused, and whether this kind of app normally needs it.</p></li><li><h3>Fix it</h3><p>Work through Fix it, one change at a time. Switch on the watcher and Auditly tells you when an app gains a risky permission.</p></li></ol>
+</div>
+</section>
+
+<section id="features" aria-labelledby="features-h">
+<div class="wrap">
+<h2 id="features-h">Everything is in, and all of it is free</h2>
+<p class="intro">Nothing below is held back for a paid tier, because there is no paid tier.</p>
+<div class="groups"><div class="group"><h3>The audit</h3><dl><div><dt>A grade for every app</dt><dd>A to F, with every reason shown and the points it costs, so you can see exactly why.</dd></div><div><dt>A score for your phone</dt><dd>Out of 100, from all your apps plus the phone's own settings, with the change since last time.</dd></div><div><dt>Apps that don&#x27;t fit</dt><dd>A torch that reads your contacts or a game that wants your location is flagged as out of place.</dd></div><div><dt>Monitoring software</dt><dd>Apps that combine the abilities stalkerware relies on are picked out and explained.</dd></div></dl></div><div class="group"><h3>In plain English</h3><dl><div><dt>Every permission explained</dt><dd>What it allows, how it can be misused and who normally needs it, before you are asked anything.</dd></div><div><dt>Special access</dt><dd>Accessibility, notification access, device admin, usage access, display over other apps and more, in one place.</dd></div><div><dt>Trackers inside apps</dt><dd>Advertising, analytics and crash reporting libraries found in each app's code, without running it.</dd></div><div><dt>The full detail</dt><dd>Signing certificate, install source, components and the full manifest, for those who want it.</dd></div></dl></div><div class="group"><h3>Fix and keep watch</h3><dl><div><dt>Fix it</dt><dd>The changes that matter most, one at a time, each opening the right page in Android's settings.</dd></div><div><dt>The watcher</dt><dd>Optional alerts when an app is installed or updated with new risky permissions, checked about hourly.</dd></div><div><dt>Timeline</dt><dd>Every install, update, removal and permission change, kept encrypted on the phone.</dd></div><div><dt>Unused apps</dt><dd>Apps you have not opened in months that still hold sensitive permissions.</dd></div></dl></div><div class="group"><h3>Your way</h3><dl><div><dt>Reports</dt><dd>A PDF privacy report, a spreadsheet and the full data as JSON, saved where you choose.</dd></div><div><dt>Compare</dt><dd>Any two apps side by side.</dd></div><div><dt>App lock and privacy</dt><dd>Fingerprint or screen lock, and hidden from the recent apps screen.</dd></div><div><dt>Themes and a widget</dt><dd>Dark, light, match your phone or your wallpaper's colours, and a privacy score widget.</dd></div></dl></div></div>
+</div>
+</section>
+
+<section id="privacy" aria-labelledby="privacy-h">
+<div class="wrap">
+<h2 id="privacy-h">Private by design</h2>
+<ul class="plain"><li><h3>No internet at all</h3><p>Auditly does not hold Android's internet permission. It cannot send anything anywhere.</p></li><li><h3>Encrypted on the phone</h3><p>The timeline, snapshots and tracker results are encrypted with a key held in the phone's secure hardware.</p></li><li><h3>Every permission explained first</h3><p>Each permission Auditly can use is explained before Android asks, and every one is optional.</p></li></ul>
+</div>
+</section>
+
+<section id="install" aria-labelledby="install-h">
+<div class="wrap">
+<h2 id="install-h">Installing and updating</h2>
+<p class="intro">Auditly is not on Google Play, so your phone asks a couple of extra questions the first time.</p>
+<ol class="steps"><li><h3>Download the app file</h3><p>Tap Download on your phone. The file is called Auditly.apk and is about 4.1 MB. If Chrome says the file might be harmful, choose Download anyway.</p></li><li><h3>Allow the install</h3><p>Open the file. The first time, Android asks you to allow your browser to install apps. Allow it, go back and tap Install. If Google Play Protect steps in, choose More details, then Install anyway.</p></li><li><h3>Updating later</h3><p>Auditly never goes online, so it cannot check for updates itself. Settings, About, Check for updates opens the release notes in your browser. Install the new file over the old one and your timeline and settings are kept.</p></li></ol>
+<p class="after-table">Version 1.0.0, released 24 November 2026. See the <a href="releases.html">release notes</a>, or <a href="releases.html#checking">check your download</a>.</p>
+</div>
+</section>
+
+<section id="questions" aria-labelledby="questions-h">
+<div class="wrap">
+<h2 id="questions-h">Questions</h2>
+<div class="faq"><details><summary>Is Auditly really free?</summary><p>Yes. There is no paid version, no subscription and no adverts, and nothing in the app is locked.</p></details><details><summary>Is it on Google Play?</summary><p>No. Auditly is a personal project and is downloaded from this site as an Android app file. It needs Android 10 or later.</p></details><details><summary>Why does it need to see all my apps?</summary><p>To audit them. Android lets Auditly list installed apps and read the permissions each one asks for. That list never leaves your phone, because Auditly has no internet access.</p></details><details><summary>Can Auditly change other apps&#x27; permissions?</summary><p>Not by itself: Android does not let one app change another's permissions. Fix it opens the right page in Android's settings so you can change it in one tap. With the optional Power mode (using the free Shizuku app) it can switch off a permission or freeze an app directly.</p></details><details><summary>How does it find trackers?</summary><p>It looks inside each app's own code for the names of 69 known advertising, analytics and crash-reporting libraries. Nothing is run and nothing is sent anywhere.</p></details><details><summary>Why is the watcher only hourly?</summary><p>Android does not tell other apps straight away when an app is installed or updated, so Auditly checks about once an hour. Uninstalls are noticed straight away. The watcher is optional and explained before you switch it on.</p></details><details><summary>What does usage access do?</summary><p>Only the Unused apps tool uses it, to see when you last opened each app. It is off until you switch it on, and Auditly explains it first.</p></details><details><summary>Does a low grade mean an app is dangerous?</summary><p>No. A grade measures how much an app can reach, not what it does with it. A messaging app needs your contacts and microphone. The reasons under each grade tell you whether that kind of app normally needs that access.</p></details><details><summary>Does it work on an iPhone?</summary><p>No. Auditly is for Android phones and tablets only.</p></details><details><summary>Who made it?</summary><p>Auditly is made by Jonathan Jackson, an independent developer in the United Kingdom.</p></details></div>
+</div>
+</section>
+
+<section class="closing" aria-labelledby="closing-h">
+<div class="wrap">
+<div><h2 id="closing-h">Know what your apps can do</h2><p>Free, with no adverts and nothing to unlock. Made by the developer of several other free Android apps: <a href="more-apps.html">see them all</a>.</p></div>
+<a class="button" href="https://github.com/CustomGPTer/auditly/releases/latest/download/Auditly.apk"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10.5l5 5 5-5"/><path d="M5 20h14"/></svg>Download for Android</a>
+</div>
+</section>
+</main>
+<footer class="colophon">
+<div class="wrap">
+<div>
+<a class="brand" href="./" aria-label="Auditly home"><svg viewBox="0 0 108 108" aria-hidden="true"><defs><linearGradient id="aubg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10233F"/><stop offset="1" stop-color="#04070E"/></linearGradient><radialGradient id="augl" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2EE6C5" stop-opacity=".22"/><stop offset="1" stop-color="#2EE6C5" stop-opacity="0"/></radialGradient><linearGradient id="aush" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2EE6C5"/><stop offset="1" stop-color="#38BDF8"/></linearGradient></defs><rect width="108" height="108" rx="24" fill="url(#aubg)"/><circle cx="54" cy="54" r="40" fill="url(#augl)"/><circle cx="54" cy="54" r="33" fill="none" stroke="#2EE6C5" stroke-opacity=".35" stroke-width="1.4"/><circle cx="54" cy="54" r="25" fill="none" stroke="#2EE6C5" stroke-opacity=".18" stroke-width="1.2"/><g transform="translate(54 52) scale(1.2) translate(-54 -51.5)"><path d="M54 33C59.5 36 65 37.4 69 37.4C69.4 52.5 63.4 62.5 54 70C44.6 62.5 38.6 52.5 39 37.4C43 37.4 48.5 36 54 33Z" fill="url(#aush)"/><path d="M46.5 51.5L51.8 56.8L62 46" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span>Auditly</span></a>
+<p>&copy; 2026 Jonathan Jackson. Auditly is an independent app.</p>
+<p>This site uses no cookies and no tracking.</p>
+<p>Set in Bricolage Grotesque and Atkinson Hyperlegible.</p>
+</div>
+<nav aria-label="The app"><h2>The app</h2><ul>
+<li><a href="./">Home</a></li>
+<li><a href="./compare.html">Compare</a></li>
+<li><a href="./releases.html">Release notes</a></li>
+
+</ul></nav>
+<nav aria-label="Legal"><h2>Legal</h2><ul>
+<li><a href="./privacy.html">Privacy policy</a></li>
+<li><a href="./terms.html">Terms of use</a></li>
+<li><a href="./licences.html">Licences</a></li>
+</ul></nav>
+<nav aria-label="More"><h2>More</h2><ul>
+<li><a href="./more-apps.html">More apps</a></li>
+<li><a href="https://customgpter.github.io/">All apps</a></li>
+<li><a href="https://github.com/CustomGPTer/auditly/issues">Contact</a></li>
+</ul></nav>
+</div>
+</footer>
+</body>
+</html>
